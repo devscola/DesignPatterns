@@ -14,10 +14,14 @@
  * limitations under the License.
  */
 
-package com.pguardiola.abstractfactory.designpatterns;
+package com.pguardiola.designpatterns.abstractfactory;
 
-public interface AbstractFactory {
-  AbstractProductA createProductA();
+public class ConcreteFactoryAlpha implements AbstractFactory {
+  public AbstractProductA createProductA() {
+    return new ConcreteProductAAlpha();
+  }
 
-  AbstractProductB createProductB();
+  public AbstractProductB createProductB() {
+    return new ConcreteProductBAlpha();
+  }
 }

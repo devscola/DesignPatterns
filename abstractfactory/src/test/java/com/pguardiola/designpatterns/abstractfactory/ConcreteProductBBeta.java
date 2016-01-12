@@ -14,14 +14,7 @@
  * limitations under the License.
  */
 
-package com.pguardiola.abstractfactory.designpatterns;
+package com.pguardiola.designpatterns.abstractfactory;
 
-public class ConcreteFactoryBeta implements AbstractFactory {
-  public AbstractProductA createProductA() {
-    return new ConcreteProductABeta();
-  }
-
-  public AbstractProductB createProductB() {
-    return new ConcreteProductBBeta();
-  }
+class ConcreteProductBBeta implements AbstractProductB {
 }

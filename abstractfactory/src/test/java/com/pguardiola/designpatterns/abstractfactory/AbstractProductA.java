@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.pguardiola.abstractfactory.designpatterns;
+package com.pguardiola.designpatterns.abstractfactory;
 
-class ConcreteProductBAlpha implements AbstractProductB {
+public interface AbstractProductA {
 }
