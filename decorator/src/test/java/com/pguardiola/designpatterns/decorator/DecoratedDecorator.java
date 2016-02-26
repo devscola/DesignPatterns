@@ -16,11 +16,16 @@
 
 package com.pguardiola.designpatterns.decorator;
 
-class ConcreteComponent implements Component {
+class DecoratedDecorator extends Decorator {
 
-  public static final String RESULT = "operation result";
+  public static final String RESULT_DECORATED = " decorated";
 
+  public DecoratedDecorator(Component component) {
+    super(component);
+  }
+
+  @Override
   public String operation() {
-    return RESULT;
+    return super.operation() + RESULT_DECORATED;
   }
 }

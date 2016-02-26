@@ -21,11 +21,4 @@ class ConcreteDecorator extends Decorator {
   public ConcreteDecorator(Component component) {
     super(component);
   }
-
-  public String decoratedOperation() {
-    String original = super.decoratedOperation();
-    String decoration = " decorated";
-
-    return original + decoration;
-  }
 }

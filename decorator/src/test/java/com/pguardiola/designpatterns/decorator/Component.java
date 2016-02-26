@@ -18,5 +18,4 @@ package com.pguardiola.designpatterns.decorator;
 
 public interface Component {
   String operation();
-  String decoratedOperation();
 }

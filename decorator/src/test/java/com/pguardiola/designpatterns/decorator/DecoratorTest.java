@@ -39,10 +39,10 @@ public class DecoratorTest {
 
   @Test public void addsBehavior() throws Exception {
     Component concreteComponent = new ConcreteComponent();
-    Decorator decorator = new ConcreteDecorator(concreteComponent);
+    Decorator decorator = new DecoratedDecorator(concreteComponent);
 
-    String result = concreteComponent.decoratedOperation();
-    String decorated = decorator.decoratedOperation();
+    String result = concreteComponent.operation();
+    String decorated = decorator.operation();
     String decoration = " decorated";
 
     assertThat(decorated, is(equalTo(result + decoration)));
@@ -50,11 +50,11 @@ public class DecoratorTest {
 
   @Test public void isStackable() throws Exception {
     Component concreteComponent = new ConcreteComponent();
-    Decorator decorator = new ConcreteDecorator(concreteComponent);
-    Decorator stackedDecorator = new ConcreteDecorator(decorator);
+    Decorator decorator = new DecoratedDecorator(concreteComponent);
+    Decorator stackedDecorator = new DecoratedDecorator(decorator);
 
-    String result = concreteComponent.decoratedOperation();
-    String stackedDecorated = stackedDecorator.decoratedOperation();
+    String result = concreteComponent.operation();
+    String stackedDecorated = stackedDecorator.operation();
     String decoration = " decorated";
     String stackedDecoration = " decorated";
 

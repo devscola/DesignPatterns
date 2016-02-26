@@ -24,10 +24,6 @@ public abstract class Decorator implements Component {
   }
 
   public String operation() {
-    return this.component.operation();
-  }
-
-  public String decoratedOperation() {
-    return this.component.decoratedOperation();
+    return component.operation();
   }
 }
